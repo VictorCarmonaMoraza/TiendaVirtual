@@ -1,3 +1,7 @@
-<p>
-  buscador-producto-categoria works!
-</p>
+<label>Ingrese nombre categorias</label>
+<select>
+  <option value="">--Seleccione--</option>
+  <option [value]="categoria.iidcategoria" *ngFor="let categoria of categorias">
+    {{ categoria.nombre}}
+  </option>
+</select>

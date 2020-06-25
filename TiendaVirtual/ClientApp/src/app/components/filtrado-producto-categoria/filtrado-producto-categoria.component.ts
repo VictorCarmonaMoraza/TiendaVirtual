@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-filtrado-producto-categoria',
+  selector: 'filtrado-producto-categoria',
   templateUrl: './filtrado-producto-categoria.component.html',
   styleUrls: ['./filtrado-producto-categoria.component.css']
 })

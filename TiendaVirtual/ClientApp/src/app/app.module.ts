@@ -21,7 +21,7 @@ import { EtiquetasFiltradoComponent } from './componentesRepaso/etiquetas-filtra
 import { PantallaFiltradoComponent } from './componentesRepaso/pantalla-filtrado/pantalla-filtrado.component';
 import { BuscadorProductoCategoriaComponent } from './components/buscador-producto-categoria/buscador-producto-categoria.component';
 import { FiltradoProductoCategoriaComponent } from './components/filtrado-producto-categoria/filtrado-producto-categoria.component';
-
+import { CategoriaService } from './services/categoria.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,14 +45,14 @@ import { FiltradoProductoCategoriaComponent } from './components/filtrado-produc
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
+      { path: 'filtradoProductoCategoria', component: FiltradoProductoCategoriaComponent, pathMatch: 'full' },
       { path: 'filtradoProductoNombre', component: FiltradoProductoNombreComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'listaPersonas', component: PantallaFiltradoComponent },
       { path: 'menunuevo', component: MenuNuevoComponent },
     ])
   ],
-  providers: [ProductoService, PersonaService],
+  providers: [ProductoService, PersonaService, CategoriaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
