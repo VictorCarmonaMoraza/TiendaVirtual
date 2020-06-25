@@ -11,6 +11,7 @@ export class EtiquetasFiltradoComponent implements OnInit {
 
   @Output() pulsarBoton: EventEmitter<any>;
   @Output() pulsarLimpiar: EventEmitter<any>;
+  titulo: string = "Hola amigo";
   
   constructor(private personaService2: PersonaService) {
     this.pulsarBoton = new EventEmitter();
