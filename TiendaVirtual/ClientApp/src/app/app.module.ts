@@ -19,6 +19,8 @@ import { PersonaService } from './services2/persona.service';
 import { MenuNuevoComponent } from './componentesRepaso/menu-nuevo/menu-nuevo.component';
 import { EtiquetasFiltradoComponent } from './componentesRepaso/etiquetas-filtrado/etiquetas-filtrado.component';
 import { PantallaFiltradoComponent } from './componentesRepaso/pantalla-filtrado/pantalla-filtrado.component';
+import { BuscadorProductoCategoriaComponent } from './components/buscador-producto-categoria/buscador-producto-categoria.component';
+import { FiltradoProductoCategoriaComponent } from './components/filtrado-producto-categoria/filtrado-producto-categoria.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { PantallaFiltradoComponent } from './componentesRepaso/pantalla-filtrado
     TablaPersonasComponent,
     MenuNuevoComponent,
     EtiquetasFiltradoComponent,
-    PantallaFiltradoComponent
+    PantallaFiltradoComponent,
+    BuscadorProductoCategoriaComponent,
+    FiltradoProductoCategoriaComponent
   ],
   imports: [
     HttpModule,
