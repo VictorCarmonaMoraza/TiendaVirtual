@@ -21,5 +21,9 @@ export class ProductoService {
     return this.http.get(this.urlBase + "api/Producto/filtrarProductosPorNombre/" + nombre)
       .map(res => res.json());
   }
+  public getFiltroProductoPorCategoria(idcategoriaParametro) {
+    return this.http.get(this.urlBase + "api/Producto/filtrarProductosPorCategoria/" + idcategoriaParametro)
+      .map(res => res.json());
+  }
 }
 

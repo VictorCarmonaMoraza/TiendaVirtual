@@ -1,2 +1,3 @@
-<buscador-producto-categoria></buscador-producto-categoria>
-<tabla-producto></tabla-producto>
+<buscador-producto-categoria (clickBuscar)="buscar($event)" (clickLimpiar)="limpiar($event)"></buscador-producto-categoria>
+<!--[productos] viene del tabla-producto.ts y "productos"viene del filtrado-producto-categoria.ts-->
+<tabla-producto [productos]="fpproductos"></tabla-producto>

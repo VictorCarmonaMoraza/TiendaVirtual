@@ -66,5 +66,32 @@ namespace TiendaVirtual.Controllers
                 return lista;
             }
         }
+
+        //Listar por categoria
+        //Filtrar podructos por nombre
+        [HttpGet]
+        [Route("api/Producto/filtrarProductosPorCategoria/{idcategoriaParametro}")]
+        public IEnumerable<ProductoCLS> filtrarProductosPorCategoria(int idcategoriaParametro)
+        {
+            //LLamamamos a la base de datos
+            using (BDRestauranteContext bd = new BDRestauranteContext())
+            {
+                List<ProductoCLS> lista = (from producto in bd.Producto
+                                           join categoria in bd.Categoria
+                                           on producto.Iidcategoria equals
+                                           categoria.Iidcategoria
+                                           where producto.Bhabilitado == 1
+                                            && producto.Iidcategoria==idcategoriaParametro
+                                           select new ProductoCLS
+                                           {
+                                               idproducto = producto.Iidproducto,
+                                               nombre = producto.Nombre,
+                                               precio = (decimal)producto.Precio,
+                                               stock = (int)producto.Stock,
+                                               nombreCategoria = categoria.Nombre,
+                                           }).ToList();
+                return lista;
+            }
+        }
     }
 }
