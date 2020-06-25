@@ -1,0 +1,20 @@
+
+
+<table class="table table-striped">
+
+
+  <thead class="thead-dark">
+
+    <tr>
+      <th *ngFor="let cabecera of cabeceras">{{cabecera}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let persona of personas">
+      <td class="bg-primary">{{persona.iidpersona}}</td>
+      <td class="bg-success">{{persona.nombreCompleto}}</td>
+      <td class="bg-warning">{{persona.telefono}}</td>
+      <td class="bg-danger">{{persona.correo}}</td>
+    </tr>
+  </tbody>
+</table>

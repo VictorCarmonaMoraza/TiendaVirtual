@@ -22,6 +22,10 @@ import { PantallaFiltradoComponent } from './componentesRepaso/pantalla-filtrado
 import { BuscadorProductoCategoriaComponent } from './components/buscador-producto-categoria/buscador-producto-categoria.component';
 import { FiltradoProductoCategoriaComponent } from './components/filtrado-producto-categoria/filtrado-producto-categoria.component';
 import { CategoriaService } from './services/categoria.service';
+import { TablaPersonaComponent } from './components/tabla-persona/tabla-persona.component';
+import { BuscadorPersonaNombreCompletoComponent } from './components/buscador-persona-nombre-completo/buscador-persona-nombre-completo.component';
+import { FiltradoPersonaNombreCompletoComponent } from './components/filtrado-persona-nombre-completo/filtrado-persona-nombre-completo.component';
+import { Persona1Service } from './services/persona1.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +41,10 @@ import { CategoriaService } from './services/categoria.service';
     EtiquetasFiltradoComponent,
     PantallaFiltradoComponent,
     BuscadorProductoCategoriaComponent,
-    FiltradoProductoCategoriaComponent
+    FiltradoProductoCategoriaComponent,
+    TablaPersonaComponent,
+    BuscadorPersonaNombreCompletoComponent,
+    FiltradoPersonaNombreCompletoComponent
   ],
   imports: [
     HttpModule,
@@ -47,12 +54,12 @@ import { CategoriaService } from './services/categoria.service';
     RouterModule.forRoot([
       { path: 'filtradoProductoCategoria', component: FiltradoProductoCategoriaComponent, pathMatch: 'full' },
       { path: 'filtradoProductoNombre', component: FiltradoProductoNombreComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
+      { path: 'filtradoPersonaNombreCompleto', component: FiltradoPersonaNombreCompletoComponent },
       { path: 'listaPersonas', component: PantallaFiltradoComponent },
       { path: 'menunuevo', component: MenuNuevoComponent },
     ])
   ],
-  providers: [ProductoService, PersonaService, CategoriaService],
+  providers: [ProductoService, PersonaService, CategoriaService, Persona1Service],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

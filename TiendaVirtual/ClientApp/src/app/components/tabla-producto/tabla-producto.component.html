@@ -11,12 +11,15 @@
 
   </thead>
   <tbody>
-    <tr *ngFor="let producto of productos">
-      <td>{{producto.idproducto}}</td>
-      <td>{{producto.nombre}}</td>
-      <td>{{producto.precio}}</td>
-      <td>{{producto.stock}}</td>
-      <td>{{producto.nombreCategoria}}</td>
+    <tr *ngFor="let producto of productos" >
+      <td class="bg-info">{{producto.idproducto}}</td>
+      <td class="bg-danger">{{producto.idproducto}}</td>
+      <td class="bg-warning">{{producto.idproducto}}</td>
+      <td class="bg-success">{{producto.idproducto}}</td>
+      <td class="bg-primary">{{producto.nombre}}</td>
+      <td class="bg-info">{{producto.precio}}</td>
+      <td class="bg-danger">{{producto.stock}}</td>
+      <td class="bg-warning">{{producto.nombreCategoria}}</td>
     </tr>
 
   </tbody>
